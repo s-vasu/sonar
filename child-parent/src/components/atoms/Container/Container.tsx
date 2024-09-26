@@ -10,8 +10,6 @@ import theme from '../../../themes/theme';
 const SC = styled.div`
   background: #19181C;
   color: #white;
-  // margin: 0 1em;
-  // padding: 0.25em 1em;
   height:100vh;
   padding:5%;
 
@@ -43,7 +41,6 @@ const SC = styled.div`
     }
     #purpletext{
     color:#B4A9FF;
-    // padding-right:1%;
     }
     #hr{
     margin:5% 0;
@@ -55,10 +52,13 @@ const SC = styled.div`
 export default function SimpleContainer({children}:{children:React.ReactNode}) {
   return (
     <SC>
-   
       <CssBaseline />
-      <Container id='outer-container' maxWidth="sm">
-        <Box className="inner-container"  children={children} />
+      <Container
+        data-testid="outer-container"
+        id="outer-container"
+        maxWidth="sm"
+      >
+        <Box className="inner-container" children={children} />
       </Container>
     </SC>
   );
