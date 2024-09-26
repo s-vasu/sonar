@@ -20,7 +20,7 @@ jobs:
      - name: Install Dependencies
        run: npm install --legacy-peer-deps
      - name: Test and coverage
-       run: npm run test CI=true
+       run: npm run test
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./myap
