@@ -46,7 +46,7 @@ const SC = styled.div`
     margin:5% 0;
     }
  
-`
+`;
 
 
 export default function SimpleContainer({children}:{children:React.ReactNode}) {
