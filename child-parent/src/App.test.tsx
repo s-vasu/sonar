@@ -1,9 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "./App"; // Adjust path if necessary
+import Page from "./pages/Page";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+jest.mock("./pages/Page", () => () => (
+  <div data-testid="page-component">Mocked Page</div>
+));
+
+describe("App Component", () => {
+  it("renders without crashing", () => {
+    render(<App />);
+    const appElement = screen.getByTestId("page-component");
+    expect(appElement).toBeInTheDocument();
+  });
+
+  it("renders the Page component", () => {
+    render(<App />);
+    const pageElement = screen.getByTestId("page-component");
+    expect(pageElement).toBeInTheDocument();
+    expect(pageElement).toHaveTextContent("Mocked Page");
+  });
+
+ 
 });
