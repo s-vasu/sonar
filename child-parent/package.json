@@ -69,7 +69,7 @@
  "jest": {
   "coveragePathIgnorePatterns": [
     "/node_modules/",
-    "/index.tsx/",
+    "<rootDir>/src/index.tsx/",
     "<rootDir>/src/pages/",
     ".*\\.stories\\.tsx$", 
     "<rootDir>/src/stories/",
