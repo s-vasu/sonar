@@ -57,7 +57,7 @@ export default function Summary({ termMonths, contracts, maxValue }: { termMonth
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-between'  }}>
         <TypographyTheme id='greytext' text="Payback amount" variant='body1' />
-        <TypographyTheme variant='body1'>{curValue}</TypographyTheme>
+        <TypographyTheme data-testid="payback-amount" variant='body1'>{curValue}</TypographyTheme>
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-between'  }}>
         <TypographyTheme id='greytext' text="Rate %" variant='body1' />
@@ -68,7 +68,7 @@ export default function Summary({ termMonths, contracts, maxValue }: { termMonth
       <hr id='hr' color='grey'/>
       <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-between'  }}>
         <TypographyTheme id='greytext' text="Total Payout" variant='body1' />
-        <TypographyTheme variant='h5'>${totalPayable}</TypographyTheme>
+        <TypographyTheme data-testid="total-payout" variant='h5'>${totalPayable}</TypographyTheme>
       </Box>
       <BasicButton className="reviewbtn" size='large' variant='contained' text='Review Your Credit' />
     </SimpleContainer>
