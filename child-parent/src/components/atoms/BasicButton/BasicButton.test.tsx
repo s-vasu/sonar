@@ -16,7 +16,7 @@ describe("BasicButton Component", () => {
     render(<BasicButton text="Click Me" variant="contained" size="large" />);
     const buttonElement = screen.getByText(/Click Me/i);
     expect(buttonElement).toHaveClass("MuiButton-contained"); // MUI applies 'contained' class for the variant
-    expect(buttonElement).toHaveClass("MuiButton-sizeLarge"); // MUI applies 'sizeLarge' class for the size
+    expect(buttonElement).toHaveClass("MuiButton-sizeLarge"); 
   });
 
   it("applies custom className prop", () => {
