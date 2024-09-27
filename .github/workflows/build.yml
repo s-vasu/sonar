@@ -20,7 +20,7 @@ jobs:
      - name: Install Dependencies
        run: npm install --force
      - name: Test and coverage
-       run: npm run test
+       run: npm run test --coverage
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./child-parent
