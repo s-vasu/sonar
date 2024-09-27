@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../public/assets/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+#outer-container *{
+    margin: 1.5% 0;
+}
+/* hr{
+    margin:10% 0;
+} */
+ #slider{
+    color:#6C5DD3;
+ }
+
+ @font-face {
+    font-family: 'Gilroy';
+    src: url('../../public/assets/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+*{
+
+    font-family: 'Gilroy', sans-serif;
+    
+}

@@ -12,18 +12,18 @@ jobs:
    runs-on: ubuntu-latest
    defaults:
      run:
-       working-directory: ./myap
+       working-directory: ./child-parent
    steps:
      - uses: actions/checkout@v2
        with:
          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
      - name: Install Dependencies
-       run: npm install --legacy-peer-deps
+       run: npm install --force
      - name: Test and coverage
        run: npm run test
      - name: SonarCloud Scan
        with:
-         projectBaseDir: ./myap
+         projectBaseDir: ./child-parent
        uses: SonarSource/sonarcloud-github-action@master
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
