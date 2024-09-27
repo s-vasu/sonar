@@ -70,10 +70,11 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/index.tsx/",
-      "/pages/",
-      "/stories/",
+      "<rootDir>/src/pages/",
+      "**/*.stories.tsx,",
       "<rootDir>/src/stories/",
-      "<rootDir>/src/pages/"
+      "<rootDir>/src/pages/",
+      "**/src/reportWebVitals.ts"
     ]
   }
 }
