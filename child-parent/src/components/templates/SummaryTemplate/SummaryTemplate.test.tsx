@@ -7,7 +7,6 @@ describe("SummaryTemplate", () => {
     const testText = "Hello, World!";
     render(<SummaryTemplate>{testText}</SummaryTemplate>);
 
-    // Check if the text is present in the document
     const element = screen.getByText(testText);
     expect(element).toBeInTheDocument();
   });
