@@ -65,5 +65,12 @@
     "jest-styled-components": "^7.2.0",
     "prop-types": "^15.8.1",
     "webpack": "^5.94.0"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/src/stories/",
+      "<rootDir>/src/pages/"
+    ]
   }
 }
