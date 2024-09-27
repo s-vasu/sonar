@@ -17,11 +17,10 @@ describe("Summary Component", () => {
       />
     );
 
-    // Simulate changing the slider value
     const slider = screen.getByRole("slider");
     fireEvent.change(slider, { target: { value: 60 } });
 
-    // Use data-testid to select the specific elements
+
     expect(screen.getByText(/Payback amount/i)).toBeInTheDocument();
     // expect(screen.getByTestId("payback-amount")).toHaveTextContent("60"); // Payback amount
     // expect(screen.getByTestId("total-payout")).toHaveTextContent("$67.2"); // Total payout
